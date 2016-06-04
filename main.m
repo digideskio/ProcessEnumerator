@@ -55,13 +55,13 @@ int main(int argc, char * argv[])
             break;
         }
         
-        const char * identity = copy_cs_identity_for_pid(current_pid);
+        const char *identity = copy_cs_identity_for_pid(current_pid);
         if (identity == NULL) {
             current_pid++;
             continue;           // pid not exist
         }
         
-        const char * path = copy_proc_args_for_pid(current_pid);
+        const char *path = copy_proc_args_for_pid(current_pid);
         
         if (path == NULL) {
             printf("Found process with id %d and identity %s\n", current_pid, identity );
